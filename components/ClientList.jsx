@@ -1,13 +1,14 @@
 import {Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import Client from "@/components/Client";
+import toast from "react-hot-toast";
 
 const getClients = async ()=>{
     try {
-        const res = await fetch("http://localhost:3000/api/clients",{
+        const res = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/clients`,{
             cache:'no-store'
         })
         if(!res.ok){
-            throw new Error("Failed to fetch Clients")
+            toast.error("Failed to get the clients data")
         }
         return res.json()
     }catch (error){
@@ -19,11 +20,10 @@ export default async function ClientList() {
 
     return (
         <>
-            <Table>
-                <TableCaption>A list of all clients.</TableCaption>
-                <TableHeader>
+            <Table className={''}>
+                <TableHeader className={'bg-gray-50'}>
                     <TableRow>
-                        <TableHead >Name</TableHead>
+                        <TableHead>Name</TableHead>
                         <TableHead>Company Name</TableHead>
                         <TableHead>Phone</TableHead>
                         <TableHead>Email</TableHead>
