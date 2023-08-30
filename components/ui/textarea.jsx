@@ -3,7 +3,7 @@
 import Script from "next/script";
 
 export default function Textarea(props) {
-console.log(props.children)
+
     return (
         <>
             <textarea defaultValue={props.children}>

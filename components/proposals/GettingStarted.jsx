@@ -6,7 +6,7 @@ import {Label} from "@/components/ui/label";
 export default function GettingStarted() {
     return (
         <>
-            <ProposalWrapper>
+            <ProposalWrapper title={'Getting Started'}>
                 <div className="flex items-center gap-8">
                     <div className="w-1/2">
                         <div className={'flex justify-between items-center gap-6 mb-3'}>
@@ -19,7 +19,7 @@ export default function GettingStarted() {
 
                         <Textarea>
                             {`
-                                            <p>We are prepared, once the project is set to begin, to start working on your project immediately. NSS will work to achieve a mutually satisfying proposal in regards to pricing and the work to be performed. Please contact NewSunSEO any time you wish to discuss this proposal further. We will contact you after submitting this proposal to follow up on any questions you may have.<br />
+                        <p>We are prepared, once the project is set to begin, to start working on your project immediately. NSS will work to achieve a mutually satisfying proposal in regards to pricing and the work to be performed. Please contact NewSunSEO any time you wish to discuss this proposal further. We will contact you after submitting this proposal to follow up on any questions you may have.<br />
                         &nbsp;</p>
                         <p>We will continue working until you are completely satisfied and at no time will you be handed over any aspect of this project unless completely satisfied (though this may increase the cost).&nbsp;<br />
                         &nbsp;</p>

@@ -11,12 +11,10 @@ export default async function ClientEdit({params}) {
     const getClient = async () => {
         try {
             const res = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/clients/${userId}`)
-            console.log(res)
             if (!res.ok) {
                 toast.error("Error Loading user")
                 redirect('/clients')
             }
-            console.log(res)
             return res.json()
         }catch (error){
             redirect('/clients')
